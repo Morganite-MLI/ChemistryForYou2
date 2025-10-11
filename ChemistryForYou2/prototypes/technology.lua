@@ -493,7 +493,7 @@ if mods["Krastorio2"] then
               {
                 type = "technology",
                 name = "advanced-silicon-processing",
-                icon = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon.png",
+                icon = "__Krastorio2Assets__/icons/items/silicon.png",
                 icon_size = 64,
                 prerequisites = {"productivity-science-pack"},
                 effects = {
@@ -560,7 +560,7 @@ if mods["248k-Redux"] then
         {
           type = "technology",
           name = "rich-water-filtration",
-          icon = "__248k-Redux__/ressources/fluids/fi_dirty_water.png",
+          icon = "__248k-Redux-graphics__/ressources/fluids/fi_dirty_water.png",
           icon_size = 64,
           prerequisites = rich_water_filtration_pre,
           effects = {
@@ -587,10 +587,10 @@ if mods["248k-Redux"] then
           name = "nuclear-waste-extraction",
           icons = (mods["Krastorio2"] and
           {
-              { icon = "__248k-Redux__/ressources/fission/fi_fuel/fi_fuel_plutonium239_item.png", icon_size = 64},
-              { icon = "__248k-Redux__/ressources/fission/fi_materials/fi_materials_waste.png", icon_size = 64, scale=0.5, shift= {-8, -8}},
+              { icon = "__248k-Redux-graphics__/ressources/fission/fi_fuel/fi_fuel_plutonium239_item.png", icon_size = 64},
+              { icon = "__248k-Redux-graphics__/ressources/fission/fi_materials/fi_materials_waste.png", icon_size = 64, scale=0.5, shift= {-8, -8}},
             } or {
-              { icon = "__248k-Redux__/ressources/fission/fi_fuel/fi_fuel_plutonium239_item.png", icon_size = 64},
+              { icon = "__248k-Redux-graphics__/ressources/fission/fi_fuel/fi_fuel_plutonium239_item.png", icon_size = 64},
             }
           ),
           prerequisites = {"rich-water-filtration", "nuclear-power"},
@@ -670,7 +670,7 @@ if mods["space-exploration"] then
       {"production-science-pack", 1},
       {"se-material-science-pack-3", 1},
       {"se-energy-science-pack-3", 1},
-      {"matter-tech-card", 1}
+      {"kr-matter-tech-card", 1}
     }
     preMatterParticle = {"kr-matter-tech-card", "se-material-science-pack-3"}
   end

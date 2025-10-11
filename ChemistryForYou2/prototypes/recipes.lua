@@ -245,7 +245,7 @@ data:extend({
     enabled = false,
     energy_required = 10,
     ingredients = {(data.raw.item["aluminum-plate"] and {type="item", name="aluminum-plate", amount=2}) or {type="item", name="iron-plate", amount=2}, {type="item", name="sodium-hydroxide", amount=2}, {type="fluid", name="water", amount=20}},
-    results = {{type="item", name="aluminium-hydroxide", amount=2}, (data.raw.fluid["hydrogen"] and {type="fluid", name="hydrogen", amount=30}) or {type="fluid", name="water", amount=10}},
+    results = {{type="item", name="aluminium-hydroxide", amount=2}, (data.raw.fluid["kr-hydrogen"] and {type="fluid", name="kr-hydrogen", amount=30}) or {type="fluid", name="water", amount=10}},
   },
   {
     type = "recipe",
@@ -261,8 +261,8 @@ data:extend({
 })
 
 local sodium_diuranate_ingredients = {{type="item", name="sodium-hydroxide", amount = 10}, { type = "fluid", name = "water", amount = 100 }}
-if data.raw.item["sand"] then
-  table.insert(sodium_diuranate_ingredients, {type="item", name="sand", amount=1})
+if data.raw.item[mods["Krastorio2"] and "kr-sand" or "sand"] then
+  table.insert(sodium_diuranate_ingredients, {type="item", name=mods["Krastorio2"] and "kr-sand" or "sand", amount=1})
 end
 data:extend({
   {
@@ -390,9 +390,9 @@ data:extend({
   }
 })
 
-local hydrogen_peroxide_ingredients = {(data.raw.fluid["hydrogen"] and { type = "fluid", name = "hydrogen", amount = 50 }) or { type = "fluid", name = "water", amount = 100 }}
-if data.raw.fluid["oxygen"] then
-  table.insert(hydrogen_peroxide_ingredients, { type = "fluid", name = "oxygen", amount = 50 })
+local hydrogen_peroxide_ingredients = {(data.raw.fluid["kr-hydrogen"] and { type = "fluid", name = "kr-hydrogen", amount = 50 }) or { type = "fluid", name = "water", amount = 100 }}
+if data.raw.fluid["kr-oxygen"] then
+  table.insert(hydrogen_peroxide_ingredients, { type = "fluid", name = "kr-oxygen", amount = 50 })
 end
 if data.raw.item["palladium-ingot"] then
   table.insert(hydrogen_peroxide_ingredients, {type="item", name="palladium-ingot", amount=1})
@@ -418,8 +418,8 @@ local hydrogen_peroxide_disproportionation_results = {{ type = "fluid", name = "
 if data.raw.item["platinum-ingot"] then
   table.insert(hydrogen_peroxide_disproportionation_ingredients, {type="item", name="platinum-ingot", amount=1})
 end
-if data.raw.fluid["oxygen"] then
-  table.insert(hydrogen_peroxide_disproportionation_results, { type = "fluid", name = "oxygen", amount = 25 })
+if data.raw.fluid["kr-oxygen"] then
+  table.insert(hydrogen_peroxide_disproportionation_results, { type = "fluid", name = "kr-oxygen", amount = 25 })
 end
 
 data:extend({
@@ -552,7 +552,7 @@ local science_pack = "__ChemistryForYou2__/graphics/icons/productivity-science-p
         type = "recipe",
         name = "rich-water-filtration",
         category = fluidFiltrationCraft,
-        icon = "__248k-Redux__/ressources/fluids/fi_dirty_water.png",
+        icon = "__248k-Redux-graphics__/ressources/fluids/fi_dirty_water.png",
         icon_size = 64,
         group = "fi_item_group",
         subgroup = "fi_item_subgroup_f",
@@ -567,8 +567,8 @@ local science_pack = "__ChemistryForYou2__/graphics/icons/productivity-science-p
         name = "nuclear-waste-extraction",
         category = "chemistry",
         icons = {
-          { icon = "__248k-Redux__/ressources/fission/fi_fuel/fi_fuel_plutonium239_item.png", icon_size = 64},
-          { icon = "__248k-Redux__/ressources/fission/fi_materials/fi_materials_waste.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
+          { icon = "__248k-Redux-graphics__/ressources/fission/fi_fuel/fi_fuel_plutonium239_item.png", icon_size = 64},
+          { icon = "__248k-Redux-graphics__/ressources/fission/fi_materials/fi_materials_waste.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
         },
         group = "fi_item_group",
         subgroup = "fi_item_subgroup_f",
@@ -588,13 +588,13 @@ if mods["Krastorio2"] then
   if data.raw.item["nylon"] then
     table.insert(ammonium_nitrate_explosive_ingredients, {type="item", name="nylon", amount = 8 })
   end
-  local sulfur_trioxide_ingredients = {{ type = "fluid", name = "sulfur-dioxide", amount = 100 }, { type = "fluid", name = "oxygen", amount = 50 }}
+  local sulfur_trioxide_ingredients = {{ type = "fluid", name = "sulfur-dioxide", amount = 100 }, { type = "fluid", name = "kr-oxygen", amount = 50 }}
   if data.raw.item["platinum-ingot"] then
     table.insert(sulfur_trioxide_ingredients, {type="item", name="platinum-ingot", amount=1})
   end
   local sulfur_trioxide_results = {{ type = "fluid", name = "sulfur-trioxide", amount = 100 }}
   if data.raw.item["platinum-ingot"] then
-    table.insert(sulfur_trioxide_results, {name="platinum-ingot", amount=1, probability=0.6})
+    table.insert(sulfur_trioxide_results, {type="item", name="platinum-ingot", amount=1, probability=0.6})
   end
 data:extend({
   {
@@ -643,7 +643,7 @@ data:extend({
     order = "a",
     enabled = false,
     energy_required = 8,
-    ingredients = {{ type = "fluid", name = "nitrate", amount = 100 }, { type = "fluid", name = "ammonia", amount = 100 }},
+    ingredients = {{ type = "fluid", name = "nitrate", amount = 100 }, { type = "fluid", name = "kr-ammonia", amount = 100 }},
     results = {{type="item", name="ammonium-nitrate",amount = 10 }},
   },
   {
@@ -665,13 +665,13 @@ data:extend({
     order = "n",
     enabled = false,
     energy_required = 10,
-    ingredients = {{ type = "fluid", name = "nitrogen", amount = 50 }, { type = "fluid", name = "oxygen", amount = 150 }},--should be made from Nitric acid but this works for now
+    ingredients = {{ type = "fluid", name = "nitrogen", amount = 50 }, { type = "fluid", name = "kr-oxygen", amount = 150 }},--should be made from Nitric acid but this works for now
     results = {{ type = "fluid", name = "nitrate", amount = 100 }},
   },
   {
     type = "recipe",
     name = "carbon-dioxide-condensation",
-    category = "atmosphere-condensation",
+    category = "kr-atmosphere-condensation",
     subgroup = "raw-material",
     order = "c",
     enabled = false,
@@ -720,13 +720,13 @@ data:extend({
     order = "a[fluid]-i[sulfur]",
     enabled = false,
     energy_required = 10,
-    ingredients = {{type = "item", name = "sulfur",amount =  10 }, { type = "fluid", name = "oxygen", amount = 150 }},
+    ingredients = {{type = "item", name = "sulfur",amount =  10 }, { type = "fluid", name = "kr-oxygen", amount = 150 }},
     results = {{ type = "fluid", name = "sulfur-trioxide", amount = 100 }},
   },
   {
     type = "recipe",
     name = "grow-wood-with-carbon-dioxide",
-    category = "bioprocessing",
+    category = "kr-bioprocessing",
     subgroup = "chemical",
     main_porduct = "wood",
     order = "a-b",
@@ -743,7 +743,7 @@ data:extend({
     order = "w",
     enabled = false,
     energy_required = 3,
-    ingredients = {{type = "item", name = "sodium-carbonate", amount = 10 }, { type = "fluid", name = "mineral-water", amount = 100 }},
+    ingredients = {{type = "item", name = "sodium-carbonate", amount = 10 }, { type = "fluid", name = "kr-mineral-water", amount = 100 }},
     results = {{ type = "fluid", name = "water", amount = 100 }},
   }
 })
@@ -853,17 +853,17 @@ if mods["bzsilicon"] then
       order = "s",
       icons = (mods["Krastorio2"] and
           {
-            { icon = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon.png", icon_size = 64},
+            { icon = "__Krastorio2Assets__/icons/items/silicon.png", icon_size = 64},
             { icon = "__ChemistryForYou2__/graphics/icons/sodium-aluminate.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
           } or {
-            { icon = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon.png", icon_size = 64},
+            { icon = "__Krastorio2Assets__/icons/items/silicon.png", icon_size = 64},
           }),
       main_product = "silica",
       subgroup = "chemical",
       enabled = false,
       energy_required = 10,
       ingredients = {{type="item", name="sodium-aluminate", amount=10}, { type = "fluid", name = "water", amount = 100 }},
-      results = {{type="item", name="silica", 10}, {"sodium-aluminate", amount=9}, { type = "fluid", name = "water", amount = 90 }}
+      results = {{type="item", name="silica", amount=10}, {type="item", name="sodium-aluminate", amount=9}, { type = "fluid", name = "water", amount = 90 }}
     },
     {
       type = "recipe",
@@ -877,12 +877,12 @@ if mods["bzsilicon"] then
           } or {
             { icon = "__bzsilicon__/graphics/icons/silicon.png", icon_size = 64},
           }),
-      main_product = "silicon",
+      main_product = mods["Krastorio2"] and "kr-silicon" or "silicon",
       subgroup = "intermediate-product",
       enabled = false,
       energy_required = 10,
-      ingredients = {{type="item", name="silica", 9}, {type = "item", name = "aluminum-plate", amount=12}},
-      results = {{type="item", name="silicon", 9}, {type = "item", name = "alumina", amount=6}}
+      ingredients = {{type="item", name="silica", amount=9}, {type = "item", name = "aluminum-plate", amount=12}},
+      results = {{type="item", name=mods["Krastorio2"] and "kr-silicon" or "silicon", amount=9}, {type = "item", name = "alumina", amount=6}}
     },
   })
   if mods["bzgas"] then
@@ -917,11 +917,11 @@ if mods["bzsilicon"] then
         order = "c",
         icons = {
               { icon = "__Nylon2__/graphics/icons/coal-tar.png", icon_size = 64},
-              { icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png", icon_size = 64, scale=0.2, shift= {-8, -8}},},
+              { icon = "__Krastorio2Assets__/icons/items/biomass.png", icon_size = 64, scale=0.2, shift= {-8, -8}},},
         subgroup = "chemical",
         enabled = false,
         energy_required = 4,
-        ingredients = {{type="item", name="biomass", amount=10}, {type = "item", name = "sodium-hydroxide", amount=10}},
+        ingredients = {{type="item", name="kr-biomass", amount=10}, {type = "item", name = "sodium-hydroxide", amount=10}},
         results = {{ type = "fluid", name = "coal-tar", amount = 10 }}
       },
     })
@@ -1131,7 +1131,7 @@ if mods["space-exploration"] then
         order = "a-b",
         enabled = false,
         energy_required = 20,
-        ingredients = {{type="item", name="se-vulcanite-block", amount=1}, {"fi_thorium232_item", amount=10}},
+        ingredients = {{type="item", name="se-vulcanite-block", amount=1}, {type="item", name="fi_thorium232_item", amount=10}},
         results = {{type="item", name="se-vulcanite-enriched", amount=5}},
       },
       {
@@ -1202,7 +1202,7 @@ if mods["space-exploration"] then
         order = "t",
         enabled = false,
         energy_required = 30,
-        ingredients = {{type="item", name="tungsten-trioxide", amount=10}, { type = "fluid", name = "hydrogen", amount = 300 }},
+        ingredients = {{type="item", name="tungsten-trioxide", amount=10}, { type = "fluid", name = "kr-hydrogen", amount = 300 }},
         results = {{type="item", name="tungsten-plate", amount=10}, { type = "fluid", name = "water", amount = 300 }},
       },
       {
