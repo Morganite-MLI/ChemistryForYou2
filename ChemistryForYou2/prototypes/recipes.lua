@@ -1,5 +1,7 @@
 local util = require("data-util")
 
+local lithium = mods["Krastorio2"] and "kr-lithium" or "lithium"
+
 if mods["space-exploration"] then
   data:extend({{
     type = "item-subgroup",
@@ -385,7 +387,7 @@ data:extend({
     order = "l",
     enabled = false,
     energy_required = 2,
-    ingredients = {(data.raw.item["lithium"] and {type="item", name="lithium",amount =  10 }) or {type="item", name="stone", amount = 10 }, {type="item", name="sodium-hydroxide", amount = 10 }},
+    ingredients = {(data.raw.item[lithium] and {type="item", name=lithium,amount =  10 }) or {type="item", name="stone", amount = 10 }, {type="item", name="sodium-hydroxide", amount = 10 }},
     results = {{type="item", name="lithium-hydroxide", amount = 10 }},
   }
 })
@@ -534,7 +536,7 @@ local science_pack = "__ChemistryForYou2__/graphics/icons/productivity-science-p
     science_pack = "__Krastorio2Assets__/icons/cards/production-tech-card.png"
   end
   if mods["248k-Redux"] then
-    local rich_water_filtration_results = {data.raw.item["lithium"] and {type = "item", name="lithium", amount=5} or {type = "item", name="el_lithium_item", amount=5}, {type="fluid", name="water", amount=100}}
+    local rich_water_filtration_results = {data.raw.item[lithium] and {type = "item", name=lithium, amount=5} or {type = "item", name="el_lithium_item", amount=5}, {type="fluid", name="water", amount=100}}
     if data.raw.item["cobaltite-ore"] then
       table.insert(rich_water_filtration_results, { type = "item", name = "cobaltite-ore", amount=1, probability=0.2})
     end
