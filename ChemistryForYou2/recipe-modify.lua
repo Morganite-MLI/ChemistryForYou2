@@ -2,6 +2,7 @@ local util = require("data-util")
 
 -- Main vanilla changes
 
+local glass_name = mods["Krastorio2"] and "kr-glass" or "glass"
 
 -- Mod changes
 if mods["248k-Redux"] then
@@ -91,7 +92,7 @@ if mods["ShockTurret"] then
 end
 
 if mods["bzgold"] and mods["ThemTharHills-Updated"] then
-    util.add_product("trace-gold-from-copper", {name="platinum-powder", amount=1, probability=0.1})
+    util.add_product("trace-gold-from-copper", { type = "item", name = "platinum-powder", amount=1, probability=0.1})
     util.add_unlock("gold-processing", "platinum-ingot")
 end
 
@@ -132,16 +133,16 @@ if mods["space-exploration"] then
 
     if mods["bztungsten"] then
         util.remove_ingredient("se-space-biochemical-laboratory", "graphene")
-        util.replace_ingredient("se-space-biochemical-laboratory", "glass", "smart-glass", 80)
+        util.replace_ingredient("se-space-biochemical-laboratory", glass_name, "smart-glass", 80)
 
         util.remove_ingredient("se-space-growth-facility", "graphene")
-        util.replace_ingredient("se-space-growth-facility", "glass", "smart-glass", 300)
+        util.replace_ingredient("se-space-growth-facility", glass_name, "smart-glass", 300)
 
         util.remove_ingredient("se-space-mirror", "silver-plate")
-        util.replace_ingredient("se-space-mirror", "glass", "smart-glass", 8)
+        util.replace_ingredient("se-space-mirror", glass_name, "smart-glass", 8)
 
         util.remove_ingredient("se-space-mirror-alternate", "silver-plate")
-        util.replace_ingredient("se-space-mirror-alternate", "glass", "smart-glass", 2)
+        util.replace_ingredient("se-space-mirror-alternate", glass_name, "smart-glass", 2)
 
         util.add_prerequisite("se-space-biochemical-laboratory","tungsten-chemistry")
     end

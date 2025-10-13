@@ -68,7 +68,7 @@ if mods["bzaluminum"] then
 end
 local sodaLimeGlassCategory = "crafting"
 
-if not data.raw.item["glass"] then
+if not data.raw.item["glass"] and not data.raw.item["kr-glass"] then
   data:extend({
     {
       type = "item",
@@ -521,11 +521,11 @@ data:extend({
         } or {
           { icon = "__ChemistryForYou2__/graphics/icons/glass.png", icon_size = 64},
         }),
-    main_product = "glass",
+    main_product = mods["Krastorio2"] and "kr-glass" or "glass",
     enabled = false,
     energy_required = 16,
     ingredients = {{type="item", name="sodium-carbonate", amount=10}, (data.raw.item["quicklime"] and {type = "item", name = "quicklime", amount=10}) or {type = "item", name = "stone", amount=5}, (data.raw.item["alumina"] and {type = "item", name = "alumina", amount=1}) or {type = "item", name = "iron-plate", amount=1}},
-    results = {{type="item", name = "glass", amount=10}}
+    results = {{type="item", name = mods["Krastorio2"] and "kr-glass" or "glass", amount=10}}
   }
 })
 
@@ -536,16 +536,16 @@ local science_pack = "__ChemistryForYou2__/graphics/icons/productivity-science-p
   if mods["248k-Redux"] then
     local rich_water_filtration_results = {data.raw.item["lithium"] and {type = "item", name="lithium", amount=5} or {type = "item", name="el_lithium_item", amount=5}, {type="fluid", name="water", amount=100}}
     if data.raw.item["cobaltite-ore"] then
-      table.insert(rich_water_filtration_results, {name="cobaltite-ore", amount=1, probability=0.2})
+      table.insert(rich_water_filtration_results, { type = "item", name = "cobaltite-ore", amount=1, probability=0.2})
     end
     if data.raw.item["gold-ore"] then
-      table.insert(rich_water_filtration_results, {name="gold-ore", amount=1, probability=0.1})
+      table.insert(rich_water_filtration_results, { type = "item", name = "gold-ore", amount=1, probability=0.1})
     end
     if data.raw.item["platinum-powder"] then
-      table.insert(rich_water_filtration_results, {name="platinum-powder", amount=1, probability=0.1})
+      table.insert(rich_water_filtration_results, { type = "item", name = "platinum-powder", amount=1, probability=0.1})
     end
     if data.raw.item["palladium-powder"] then
-      table.insert(rich_water_filtration_results, {name="palladium-powder", amount=1, probability=0.1})
+      table.insert(rich_water_filtration_results, { type = "item", name = "palladium-powder", amount=1, probability=0.1})
     end
     data:extend({
       {
@@ -1149,7 +1149,7 @@ if mods["space-exploration"] then
     util.add_productivity("deep-space-ore-enrichment")
   end
   if mods["bztungsten"] then
-    local smart_glass_ingredients = {{type="item", name="tungsten-trioxide", amount=10}, {type="item", name="glass", amount=10}}
+    local smart_glass_ingredients = {{type="item", name="tungsten-trioxide", amount=10}, {type="item", name=mods["Krastorio2"] and "kr-glass" or "glass", amount=10}}
     if data.raw.item["graphene"] then
       table.insert(smart_glass_ingredients, {type="item", name="graphene", amount=4})
     end
