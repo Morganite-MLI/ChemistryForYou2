@@ -866,27 +866,31 @@ if mods["bzsilicon"] then
       energy_required = 10,
       ingredients = {{type="item", name="sodium-aluminate", amount=10}, { type = "fluid", name = "water", amount = 100 }},
       results = {{type="item", name="silica", amount=10}, {type="item", name="sodium-aluminate", amount=9}, { type = "fluid", name = "water", amount = 90 }}
-    },
-    {
-      type = "recipe",
-      name = "advanced-silicon-processing",
-      category = "smelting",
-      order = "g",
-      icons = (mods["Krastorio2"] and
-          {
-            { icon = "__bzsilicon__/graphics/icons/silicon.png", icon_size = 64},
-            { icon = "__bzaluminum__/graphics/icons/aluminum-plate.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
-          } or {
-            { icon = "__bzsilicon__/graphics/icons/silicon.png", icon_size = 64},
-          }),
-      main_product = mods["Krastorio2"] and "kr-silicon" or "silicon",
-      subgroup = "intermediate-product",
-      enabled = false,
-      energy_required = 10,
-      ingredients = {{type="item", name="silica", amount=9}, {type = "item", name = "aluminum-plate", amount=12}},
-      results = {{type="item", name=mods["Krastorio2"] and "kr-silicon" or "silicon", amount=9}, {type = "item", name = "alumina", amount=6}}
-    },
+    }
   })
+  if data.raw.item["aluminum-plate"] then
+    data:extend({
+      {
+        type = "recipe",
+        name = "advanced-silicon-processing",
+        category = "smelting",
+        order = "g",
+        icons = (mods["Krastorio2"] and
+            {
+              { icon = "__bzsilicon__/graphics/icons/silicon.png", icon_size = 64},
+              { icon = "__bzaluminum__/graphics/icons/aluminum-plate.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
+            } or {
+              { icon = "__bzsilicon__/graphics/icons/silicon.png", icon_size = 64},
+            }),
+        main_product = mods["Krastorio2"] and "kr-silicon" or "silicon",
+        subgroup = "intermediate-product",
+        enabled = false,
+        energy_required = 10,
+        ingredients = {{type="item", name="silica", amount=9}, {type = "item", name = "aluminum-plate", amount=12}},
+        results = {{type="item", name=mods["Krastorio2"] and "kr-silicon" or "silicon", amount=9}, {type = "item", name = "alumina", amount=6}}
+      }
+    })
+  end
   if mods["bzgas"] then
     data:extend({
       {
