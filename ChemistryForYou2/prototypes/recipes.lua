@@ -667,7 +667,7 @@ data:extend({
     order = "n",
     enabled = false,
     energy_required = 10,
-    ingredients = {{ type = "fluid", name = "nitrogen", amount = 50 }, { type = "fluid", name = "kr-oxygen", amount = 150 }},--should be made from Nitric acid but this works for now
+    ingredients = {{ type = "fluid", name = "kr-nitrogen", amount = 50 }, { type = "fluid", name = "kr-oxygen", amount = 150 }},--should be made from Nitric acid but this works for now
     results = {{ type = "fluid", name = "nitrate", amount = 100 }},
   },
   {

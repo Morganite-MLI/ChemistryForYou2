@@ -858,5 +858,4 @@ if mods["space-exploration"] then
   if mods["248k-Redux"] then
     data.raw.technology["nuclear-waste-extraction"].unit.ingredients[#data.raw.technology["nuclear-waste-extraction"].unit.ingredients+1] = {"se-rocket-science-pack", 1}
   end
-    data.raw.technology["trace-uranium-extraction"].unit.ingredients[#data.raw.technology["trace-uranium-extraction"].unit.ingredients+1] = {"se-rocket-science-pack", 1}
 end
