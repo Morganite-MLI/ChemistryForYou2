@@ -21,7 +21,7 @@ if mods["bztin"] then
   saltpeterPrerequ =  {"organic-chemistry"}
 end
 
-if mods["bzsilicon"] then
+if mods["bzgas"] and mods["bzsilicon"] then
   rich_water_filtration_pre = {"water-filtration"}
 end
 
