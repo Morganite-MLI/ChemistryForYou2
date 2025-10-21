@@ -17,11 +17,11 @@ if mods["Krastorio2"] then
 end
 
 local saltpeterPrerequ = {"chemical-science-pack"}
-if mods["bztin"] then
+if mods["bztin2"] then
   saltpeterPrerequ =  {"organic-chemistry"}
 end
 
-if mods["bzgas"] and mods["bzsilicon"] then
+if mods["bzgas2"] and mods["bzsilicon2"] then
   rich_water_filtration_pre = {"water-filtration"}
 end
 
@@ -369,7 +369,7 @@ if mods["Krastorio2"] then
             }
           }
       })
-    if mods["bzgas"] then
+    if mods["bzgas2"] then
         data:extend(
         {
           {
@@ -431,7 +431,7 @@ if mods["Krastorio2"] then
             }
           }
         })
-        if mods["bzchlorine"] then
+        if mods["bzchlorine2"] then
           util.add_unlock("aluminium-chemistry", "sodium-hydroxide-reaction")
         end
         --Apperently I need electrolysis-2 tech for compatibility with EndgameCombat
@@ -458,7 +458,7 @@ if mods["Krastorio2"] then
                   },
                 })
         end
-        if mods["bzsilicon"] then
+        if mods["bzsilicon2"] then
             data:extend(
             {
               {
@@ -617,13 +617,13 @@ if mods["248k-Redux"] then
 end
 
 if mods["ThemTharHills-Updated"] then
-    if (mods["bzfoundry"] and mods["BrassTacks-Updated"]) and (mods["bzlead"] and mods["bzgold"]) then
+    if (mods["bzfoundry2"] and mods["BrassTacks-Updated"]) and (mods["bzlead2"] and mods["bzgold2"]) then
         data:extend(
         {
           {
             type = "technology",
             name = "silver-pyrometallurgi",
-            icon = "__bzgold__/graphics/icons/silver-ore.png",
+            icon = "__bzgold2__/graphics/icons/silver-ore.png",
             icon_size = 128,
             prerequisites = {"productivity-science-pack"},
             effects = {
@@ -700,7 +700,7 @@ if mods["space-exploration"] then
         }
       },
     })
-if mods["bztungsten"] then
+if mods["bztungsten2"] then
   data:extend(
         {
           {

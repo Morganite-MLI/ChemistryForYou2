@@ -19,7 +19,7 @@ else
 end
 
 if mods["ThemTharHills-Updated"] then
-if (mods["bzfoundry"] and mods["BrassTacks-Updated"]) and (mods["bzlead"] and mods["bzgold"]) then
+if (mods["bzfoundry2"] and mods["BrassTacks-Updated"]) and (mods["bzlead2"] and mods["bzgold2"]) then
 data:extend({
   {
     type = "recipe",
@@ -59,13 +59,13 @@ local alumHydroxideSmeltIcon = (mods["Krastorio2"] and
   { icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64},
 })
 
-if mods["bzaluminum"] then
+if mods["bzaluminum2"] then
   alumHydroxideSmeltIcon = (mods["Krastorio2"] and
 {
-  { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128},
+  { icon = "__bzaluminum2__/graphics/icons/alumina.png", icon_size = 128},
   { icon = "__ChemistryForYou2__/graphics/icons/aluminium-hydroxide.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
 } or {
-  { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128},
+  { icon = "__bzaluminum2__/graphics/icons/alumina.png", icon_size = 128},
 })
 end
 local sodaLimeGlassCategory = "crafting"
@@ -846,7 +846,7 @@ if mods["Cobalt2"] then
   })
 end
 
-if mods["bzsilicon"] then
+if mods["bzsilicon2"] then
   data:extend({
     {
       type = "recipe",
@@ -877,10 +877,10 @@ if mods["bzsilicon"] then
         order = "g",
         icons = (mods["Krastorio2"] and
             {
-              { icon = "__bzsilicon__/graphics/icons/silicon.png", icon_size = 64},
-              { icon = "__bzaluminum__/graphics/icons/aluminum-plate.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
+              { icon = "__bzsilicon2__/graphics/icons/silicon.png", icon_size = 64},
+              { icon = "__bzaluminum2__/graphics/icons/aluminum-plate.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
             } or {
-              { icon = "__bzsilicon__/graphics/icons/silicon.png", icon_size = 64},
+              { icon = "__bzsilicon2__/graphics/icons/silicon.png", icon_size = 64},
             }),
         main_product = mods["Krastorio2"] and "kr-silicon" or "silicon",
         subgroup = "intermediate-product",
@@ -891,7 +891,7 @@ if mods["bzsilicon"] then
       }
     })
   end
-  if mods["bzgas"] then
+  if mods["bzgas2"] then
     data:extend({
       {
         type = "recipe",
@@ -900,10 +900,10 @@ if mods["bzsilicon"] then
         order = "a[fluid]-g[formaldaehyde]",
         icons = (mods["Krastorio2"] and
             {
-              { icon = "__bzgas__/graphics/icons/formaldehyde.png", icon_size = 128},
+              { icon = "__bzgas2__/graphics/icons/formaldehyde.png", icon_size = 128},
               { icon = "__ChemistryForYou2__/graphics/icons/zeolite.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
             } or {
-              { icon = "__bzgas__/graphics/icons/formaldehyde.png", icon_size = 128},
+              { icon = "__bzgas2__/graphics/icons/formaldehyde.png", icon_size = 128},
             }),
         main_product = "formaldehyde",
         subgroup = "fluid-recipes",
@@ -933,7 +933,7 @@ if mods["bzsilicon"] then
     })
   end
 end
-if mods["bzchlorine"] then
+if mods["bzchlorine2"] then
   data:extend({
     {
       type = "recipe",
@@ -942,10 +942,10 @@ if mods["bzchlorine"] then
       order = "s",
       icons = (mods["Krastorio2"] and
           {
-            { icon = "__bzchlorine__/graphics/icons/salt.png", icon_size = 128},
+            { icon = "__bzchlorine2__/graphics/icons/salt.png", icon_size = 128},
             { icon = "__ChemistryForYou2__/graphics/icons/sodium-hydroxide.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
           } or {
-            { icon = "__bzchlorine__/graphics/icons/salt.png", icon_size = 128},
+            { icon = "__bzchlorine2__/graphics/icons/salt.png", icon_size = 128},
           }),
       main_product = "salt",
       subgroup = "chemical",
@@ -1154,7 +1154,7 @@ if mods["space-exploration"] then
     })
     util.add_productivity("deep-space-ore-enrichment")
   end
-  if mods["bztungsten"] then
+  if mods["bztungsten2"] then
     local smart_glass_ingredients = {{type="item", name="tungsten-trioxide", amount=10}, {type="item", name=mods["Krastorio2"] and "kr-glass" or "glass", amount=10}}
     if data.raw.item["graphene"] then
       table.insert(smart_glass_ingredients, {type="item", name="graphene", amount=4})
@@ -1198,10 +1198,10 @@ if mods["space-exploration"] then
         name = "tungsten-trioxide-smelting",
         icons = (mods["Krastorio2"] and
         {
-          { icon = "__bztungsten__/graphics/icons/tungsten-plate.png", icon_size = 128},
+          { icon = "__bztungsten2__/graphics/icons/tungsten-plate.png", icon_size = 128},
           { icon = "__ChemistryForYou2__/graphics/icons/tungsten-trioxide.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
         } or {
-          { icon = "__bztungsten__/graphics/icons/tungsten-plate.png", icon_size = 128},
+          { icon = "__bztungsten2__/graphics/icons/tungsten-plate.png", icon_size = 128},
         }),
         category = "smelting",
         subgroup = "chemical",

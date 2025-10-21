@@ -91,7 +91,7 @@ if mods["ShockTurret"] then
       }
 end
 
-if mods["bzgold"] and mods["ThemTharHills-Updated"] then
+if mods["bzgold2"] and mods["ThemTharHills-Updated"] then
     util.add_product("trace-gold-from-copper", { type = "item", name = "platinum-powder", amount=1, probability=0.1})
     util.add_unlock("gold-processing", "platinum-ingot")
 end
@@ -100,7 +100,7 @@ if mods["LasingAround-Updated"] then
     util.replace_ingredient("carbon-dioxide-laser", "petroleum-gas", "carbon-dioxide", 100)
 end
 
-if mods["bzgas"] then
+if mods["bzgas2"] then
     util.add_product("gas-reforming",  { type = "fluid", name = "carbon-dioxide", amount = 50 })
 end
 
@@ -131,7 +131,7 @@ if mods["space-exploration"] then
         util.add_product("calcium-plate", { type = "fluid", name = "carbon-dioxide", amount = 10 })
     end
 
-    if mods["bztungsten"] then
+    if mods["bztungsten2"] then
         util.remove_ingredient("se-space-biochemical-laboratory", "graphene")
         util.replace_ingredient("se-space-biochemical-laboratory", glass_name, "smart-glass", 80)
 
