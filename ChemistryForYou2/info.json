@@ -1,8 +1,9 @@
 {
   "name": "ChemistryForYou2",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "factorio_version": "2.0",
   "title": "ChemistryForYou",
+  "description": "This mod adds more chemistry and is intented to be played with my other mods aswell as K2, SE and BZ.\n\nThis mod is inspired by Brevven's BZ mods.",
   "author": "Timeken, cackling fiend",
   "homepage": "https://discord.gg/ufvFUJtVwk",
   "dependencies": [
@@ -37,7 +38,7 @@
     "? space-exploration",
     "? ShockTurret",
     "? Tantalite2",
-    "? ThemTharHills-Updated"
-  ],
-  "description": "This mod adds more chemistry and is intented to be played with my other mods aswell as K2, SE and BZ.\n\nThis mod is inspired by Brevven's BZ mods."
+    "? ThemTharHills-Updated",
+    "! space-age"
+  ]
 }
