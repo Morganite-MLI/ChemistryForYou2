@@ -321,7 +321,7 @@ data:extend({
     order = "a",
     enabled = false,
     energy_required = 8,
-    ingredients = {{type="item", name="sodium-aluminate", amount=5},(data.raw.fluid["gas"] and {type="item", name="silica", amount=5}) or {type="item", name="stone", amount=5}, {type="fluid", name="water", amount=100}},
+    ingredients = {{type="item", name="sodium-aluminate", amount=5},(data.raw.item["silica"] and {type="item", name="silica", amount=5}) or {type="item", name="stone", amount=5}, {type="fluid", name="water", amount=100}},
     results = {{type="item", name="zeolite", amount=10}},
   },
   {
