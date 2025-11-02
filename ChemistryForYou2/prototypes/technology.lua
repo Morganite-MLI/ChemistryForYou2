@@ -67,7 +67,7 @@ data:extend(
       icons = (mods["Krastorio2"] and
         {
           { icon = "__Krastorio2Assets__/icons/items/glass.png", icon_size = 64},
-          { icon = "__ChemistryForYou2__/graphics/icons/sodium-carbonate.png", icon_size = 128, scale=0.25, shift= {-8, -8}},
+          { icon = "__ChemistryForYou2__/graphics/icons/sodium-carbonate.png", icon_size = 128, scale=0.5, shift= {-24, -24}},
         } or {
           { icon = "__ChemistryForYou2__/graphics/icons/sodium-carbonate.png", icon_size = 128},
         }),
@@ -157,7 +157,7 @@ data:extend(
       icons = (mods["BrimStuff-Updated"] and
         {
           { icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", icon_size = 64},
-          { icon = "__BrimStuff-Updated__/graphics/icons/potassium-nitrate.png", icon_size = 64, scale=0.5, shift= {-8, -8}},
+          { icon = "__BrimStuff-Updated__/graphics/icons/potassium-nitrate.png", icon_size = 64, scale=1, shift= {-24, -24}},
         } or {
           { icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", icon_size = 64},
         }),
@@ -525,7 +525,7 @@ if mods["Krastorio2"] then
                 type = "technology",
                 name = "air-scrubing-oil-processing",
                 icons = {{ icon = "__base__/graphics/icons/fluid/light-oil.png", icon_size = 64},
-                { icon = "__Limestone2__/graphics/icons/limestone-powder.png", icon_size = 64, scale=0.3, shift= {-8, -8}},},
+                { icon = "__Limestone2__/graphics/icons/limestone-powder.png", icon_size = 64, scale=1, shift= {-24, -24}},},
                 prerequisites = {"productivity-science-pack", "aluminium-chemistry"},
                 effects = {
                     {
