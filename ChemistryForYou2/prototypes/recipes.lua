@@ -896,6 +896,7 @@ if mods["bzsilicon2"] then
       {
         type = "recipe",
         name = "zeolite-formaldehyde",
+        localised_name = { "item-name.zeolite" },
         category = "chemistry",
         order = "a[fluid]-g[formaldaehyde]",
         icons = (mods["Krastorio2"] and
