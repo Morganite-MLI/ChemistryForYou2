@@ -536,7 +536,7 @@ local science_pack = "__ChemistryForYou2__/graphics/icons/productivity-science-p
     science_pack = "__Krastorio2Assets__/icons/cards/production-tech-card.png"
   end
   if mods["248k-Redux"] then
-    local rich_water_filtration_results = {data.raw.item[lithium] and {type = "item", name=lithium, amount=5} or {type = "item", name="el_lithium_item", amount=5}, {type="fluid", name="water", amount=100}}
+    local rich_water_filtration_results = {data.raw.item[lithium] and {type = "item", name=lithium, amount=5} or {type = "item", name="el_lithium", amount=5}, {type="fluid", name="water", amount=100}}
     if data.raw.item["cobaltite-ore"] then
       table.insert(rich_water_filtration_results, { type = "item", name = "cobaltite-ore", amount=1, probability=0.2})
     end

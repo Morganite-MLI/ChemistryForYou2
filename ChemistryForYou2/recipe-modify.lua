@@ -6,7 +6,7 @@ local glass_name = mods["Krastorio2"] and "kr-glass" or "glass"
 
 -- Mod changes
 if mods["248k-Redux"] then
-    util.remove_ingredient("satellite", "fu_materials_KFK")
+    util.remove_ingredient("satellite", "fu_KFK")
 
     util.add_prerequisite("fi_ceramic_tech","productivity-science-pack")
     data.raw.technology["fi_ceramic_tech"].unit.ingredients[#data.raw.technology["fi_ceramic_tech"].unit.ingredients+1] = {"productivity-science-pack", 1}
@@ -25,11 +25,11 @@ if mods["248k-Redux"] then
 
     util.add_unlock("el_lithium_tech","lithium-hydroxide")
     if mods["LithiumFix"] then
-        util.replace_ingredient("el_lithium_battery_recipe", "lithium", "lithium-hydroxide", 4)
-        util.replace_ingredient("el_lithium_basic_battery_recipe", "lithium", "lithium-hydroxide", 4)
+        util.replace_ingredient("el_lithium_battery", "lithium", "lithium-hydroxide", 4)
+        util.replace_ingredient("el_lithium_basic_battery", "lithium", "lithium-hydroxide", 4)
     else
-        util.replace_ingredient("el_lithium_battery_recipe", "el_lithium_item", "lithium-hydroxide", 4)
-        util.replace_ingredient("el_lithium_basic_battery_recipe", "el_lithium_item", "lithium-hydroxide", 4)
+        util.replace_ingredient("el_lithium_battery", "el_lithium", "lithium-hydroxide", 4)
+        util.replace_ingredient("el_lithium_basic_battery", "el_lithium", "lithium-hydroxide", 4)
     end
 end
 
