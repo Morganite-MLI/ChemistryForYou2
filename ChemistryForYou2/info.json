@@ -8,7 +8,7 @@
   "homepage": "https://discord.gg/ufvFUJtVwk",
   "dependencies": [
     "base >= 2.0.0",
-    "? 248k-Redux",
+    "? 248k-Redux >= 0.1.35",
     "? Bio_Industries_2",
     "? BrassTacks-Updated",
     "? bobassembly",
