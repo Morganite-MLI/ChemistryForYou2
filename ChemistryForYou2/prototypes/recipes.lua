@@ -728,6 +728,7 @@ data:extend({
   {
     type = "recipe",
     name = "grow-wood-with-carbon-dioxide",
+    localised_name = { "item-name.wood" },
     category = "kr-bioprocessing",
     subgroup = "chemical",
     main_porduct = "wood",
