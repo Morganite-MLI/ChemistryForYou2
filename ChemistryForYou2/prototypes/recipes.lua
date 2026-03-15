@@ -578,7 +578,7 @@ local science_pack = "__ChemistryForYou2__/graphics/icons/productivity-science-p
         enabled = false,
         energy_required = 60,
         ingredients = {data.raw.fluid["kr-nitric-acid"] and {type="fluid", name="kr-nitric-acid", amount=100} or {type="fluid", name="sulfuric-acid", amount=100}, {type="item", name="fi_materials_waste", amount=1}},
-        results = {{type="item", name="fi_plutonium239_item", amount=1, probability=0.05}, {type="item", name="uranium-238", amount=1, probability=0.1}, {type="item", name="fi_thorium232_item", amount=1, probability=0.2}},
+        results = {{type="item", name="fi_plutonium239_item", amount=1, probability=0.05}, {type="item", name="uranium-238", amount=1, probability=0.1}, {type="item", name="fi_thorium232", amount=1, probability=0.2}},
       }
     })
   end
@@ -1139,7 +1139,7 @@ if mods["space-exploration"] then
         order = "a-b",
         enabled = false,
         energy_required = 20,
-        ingredients = {{type="item", name="se-vulcanite-block", amount=1}, {type="item", name="fi_thorium232_item", amount=10}},
+        ingredients = {{type="item", name="se-vulcanite-block", amount=1}, {type="item", name="fi_thorium232", amount=10}},
         results = {{type="item", name="se-vulcanite-enriched", amount=5}},
       },
       {
