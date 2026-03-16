@@ -1,6 +1,6 @@
 {
   "name": "ChemistryForYou2",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "factorio_version": "2.0",
   "title": "ChemistryForYou",
   "description": "This mod adds more chemistry and is intented to be played with my other mods aswell as K2, SE and BZ.\n\nThis mod is inspired by Brevven's BZ mods.",
@@ -8,7 +8,7 @@
   "homepage": "https://discord.gg/ufvFUJtVwk",
   "dependencies": [
     "base >= 2.0.0",
-    "? 248k-Redux",
+    "? 248k-Redux >= 0.1.35",
     "? Bio_Industries_2",
     "? BrassTacks-Updated",
     "? bobassembly",
