@@ -53,6 +53,7 @@ if mods["Krastorio2"] then
     util.add_unlock("kr-bio-processing","tissue-digestion")
     data.raw.technology["kr-bio-fuel"].unit.ingredients[#data.raw.technology["kr-bio-fuel"].unit.ingredients+1] = {"productivity-science-pack", 1}
     util.add_product("kr-water-electrolysis", {type="item", name="sodium-hydroxide", amount=2})
+    util.add_product("se-kr-catalysed-water-electrolysis", {type="item", name="sodium-hydroxide", amount=20})
 
     if mods["BrimStuff-Updated"] then
         util.add_unlock("kr-fluids-chemistry","sodium-hydroxide-waste-treatment")
