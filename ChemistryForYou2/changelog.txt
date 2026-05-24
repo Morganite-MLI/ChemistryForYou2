@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.14
+Date: 24.05.2026
+  Thanks to Morganite for all the fixes
+  Bug Fixes:
+    - Add sodium hydroxide product to iridium-catalysed water elctrolysis
+    - Fix localization for air scrubbing oil processing
+---------------------------------------------------------------------------------------------------
 Version: 2.0.13
 Date: 08.04.2026
   Bug Fixes:
