@@ -402,11 +402,13 @@ function replace_ingredient(recipe, old, new, amount, multiply)
 		for i, ingredient in pairs(recipe.ingredients) do
 			if ingredient.name == old then
         ingredient.name = new
+        if amount then
           if multiply then
             ingredient.amount = amount * ingredient.amount
           else
             ingredient.amount = amount
           end
+        end
       end
 		end
 	end
