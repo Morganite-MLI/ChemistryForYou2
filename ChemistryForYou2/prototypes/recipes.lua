@@ -24,7 +24,7 @@ data:extend({
   {
     type = "recipe",
     name = "silver-pyrometallurgi",
-    category = "founding",
+    categories = {"founding"},
     main_product = "silver-ore",
     subgroup = "raw-material",
     order = "s",
@@ -224,7 +224,7 @@ data:extend({
   {
     type = "recipe",
     name = "sodium-carbonate",
-    category = "chemistry",
+    categories = {"chemistry"},
     icon = "__ChemistryForYou2__/graphics/icons/sodium-carbonate.png",
     icon_size = 128,
     main_product = "sodium-carbonate",
@@ -238,7 +238,7 @@ data:extend({
   {
     type = "recipe",
     name = "aluminium-hydroxide",
-    category = "chemistry",
+    categories = {"chemistry"},
     icon = "__ChemistryForYou2__/graphics/icons/aluminium-hydroxide.png",
     icon_size = 128,
     main_product = "aluminium-hydroxide",
@@ -252,7 +252,7 @@ data:extend({
   {
     type = "recipe",
     name = "aluminium-hydroxide-smelting",
-    category = "smelting",
+    categories = {"smelting"},
     order = "alumina",
     icons = alumHydroxideSmeltIcon,
     enabled = false,
@@ -270,7 +270,7 @@ data:extend({
   {
     type = "recipe",
     name = "sodium-diuranate",
-    category = fluidFiltrationCraft,
+    categories = {fluidFiltrationCraft},
     order = "s",
     icon = "__ChemistryForYou2__/graphics/icons/sodium-diuranate.png",
     icon_size = 128,
@@ -285,7 +285,7 @@ data:extend({
     type = "recipe",
     name = "sodium-diuranate-smelting",
     localised_name = { "item-name.uranium-ore" },
-    category = "smelting",
+    categories = {"smelting"},
     order = "u",
     icons = (mods["Krastorio2"] and
         {
@@ -302,7 +302,7 @@ data:extend({
   {
     type = "recipe",
     name = "carbon-dioxide",
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "raw-material",
     order = "c",
     enabled = false,
@@ -313,7 +313,7 @@ data:extend({
   {
     type = "recipe",
     name = "zeolite",
-    category = "chemistry",
+    categories = {"chemistry"},
     icon = "__ChemistryForYou2__/graphics/icons/zeolite.png",
     icon_size = 128,
     main_product = "zeolite",
@@ -327,7 +327,7 @@ data:extend({
   {
     type = "recipe",
     name = "sodium-aluminate",
-    category = "chemistry",
+    categories = {"chemistry"},
     icon = "__ChemistryForYou2__/graphics/icons/sodium-aluminate.png",
     icon_size = 128,
     main_product = "sodium-aluminate",
@@ -341,7 +341,7 @@ data:extend({
   {
     type = "recipe",
     name = "lithium-hydroxide-lubricant",
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     order = "p",
     enabled = false,
@@ -356,7 +356,7 @@ data:extend({
       { icon = "__ChemistryForYou2__/graphics/icons/lithium-hydroxide.png", icon_size = 128},
       { icon = "__ChemistryForYou2__/graphics/icons/lithium-carbonate.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
     },
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     main_porduct = "lithium-hydroxide",
     order = "l",
@@ -370,7 +370,7 @@ data:extend({
     name = "lithium-peroxide",
     icon = "__ChemistryForYou2__/graphics/icons/lithium-peroxide.png",
     icon_size = 128,
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     main_porduct = "lithium-peroxide",
     order = "l",
@@ -382,7 +382,7 @@ data:extend({
   {
     type = "recipe",
     name = "lithium-hydroxide",
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     order = "l",
     enabled = false,
@@ -405,7 +405,7 @@ data:extend({
     name = "hydrogen-peroxide",
     icon = "__ChemistryForYou2__/graphics/icons/hydrogen-peroxide.png",
     icon_size = 128,
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     order = "h",
     enabled = false,
@@ -430,7 +430,7 @@ data:extend({
     name = "hydrogen-peroxide-disproportionation",
     icon = "__base__/graphics/icons/fluid/water.png",
     icon_size = 64,
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     main_porduct = "water",
     order = "h",
@@ -446,7 +446,7 @@ data:extend({
       { icon = "__base__/graphics/icons/rocket-fuel.png", icon_size = 64},
       { icon = "__ChemistryForYou2__/graphics/icons/hydrogen-peroxide.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
     },
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = fuel_subgroup,
     order = "h",
     enabled = false,
@@ -471,7 +471,7 @@ data:extend({
       } or {
         { icon = "__base__/graphics/icons/rocket-fuel.png", icon_size = 64},
       }),
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = fuel_subgroup,
     order = "h",
     enabled = false,
@@ -503,7 +503,7 @@ data:extend({
       } or {
         { icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", icon_size = 64},
       }),
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     order = "a[fluid]-g[sulfuric-acid]",
     enabled = false,
@@ -514,7 +514,7 @@ data:extend({
   {
     type = "recipe",
     name = "soda-lime-glass",
-    category = sodaLimeGlassCategory,
+    categories = {sodaLimeGlassCategory},
     order = "a2[glass]",
     icons = (mods["Krastorio2"] and
         {
@@ -553,7 +553,7 @@ local science_pack = "__ChemistryForYou2__/graphics/icons/productivity-science-p
       {
         type = "recipe",
         name = "rich-water-filtration",
-        category = fluidFiltrationCraft,
+        categories = {fluidFiltrationCraft},
         icon = "__248k-Redux-graphics__/ressources/fluids/fi_dirty_water.png",
         icon_size = 64,
         group = "fi_item_group",
@@ -567,7 +567,7 @@ local science_pack = "__ChemistryForYou2__/graphics/icons/productivity-science-p
       {
         type = "recipe",
         name = "nuclear-waste-extraction",
-        category = "chemistry",
+        categories = {"chemistry"},
         icons = {
           { icon = "__248k-Redux-graphics__/ressources/fission/fi_fuel/fi_fuel_plutonium239_item.png", icon_size = 64},
           { icon = "__248k-Redux-graphics__/ressources/fission/fi_materials/fi_materials_waste.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
@@ -640,7 +640,7 @@ data:extend({
   {
     type = "recipe",
     name = "ammonium-nitrate",
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     order = "a",
     enabled = false,
@@ -651,7 +651,7 @@ data:extend({
   {
     type = "recipe",
     name = "ammonium-nitrate-explosives",
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     order = "j[explosives]",
     enabled = false,
@@ -662,7 +662,7 @@ data:extend({
   {
     type = "recipe",
     name = "nitrate",
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     order = "n",
     enabled = false,
@@ -673,7 +673,7 @@ data:extend({
   {
     type = "recipe",
     name = "carbon-dioxide-condensation",
-    category = "kr-atmosphere-condensation",
+    categories = {"kr-atmosphere-condensation"},
     subgroup = "raw-material",
     order = "c",
     enabled = false,
@@ -686,7 +686,7 @@ data:extend({
     name = "sulfur-trioxide",
     icon = "__ChemistryForYou2__/graphics/icons/sulfur-trioxide.png",
     icon_size = 128,
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     main_porduct = "sulfur-trioxide",
     order = "a[fluid]-i[sulfur]",
@@ -702,7 +702,7 @@ data:extend({
       { icon = "__base__/graphics/icons/fluid/sulfuric-acid.png", icon_size = 64},
       { icon = "__ChemistryForYou2__/graphics/icons/sulfur-trioxide.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
     },
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     order = "a[fluid]-h[sulfuric-acid]",
     enabled = false,
@@ -717,7 +717,7 @@ data:extend({
       { icon = "__ChemistryForYou2__/graphics/icons/sulfur-trioxide.png", icon_size = 128},
       { icon = "__base__/graphics/icons/sulfur.png", icon_size = 64, scale=0.3, shift= {-8, -8}},
     },
-    category = "smelting",
+    categories = {"smelting"},
     subgroup = "chemical",
     order = "a[fluid]-i[sulfur]",
     enabled = false,
@@ -729,7 +729,7 @@ data:extend({
     type = "recipe",
     name = "grow-wood-with-carbon-dioxide",
     localised_name = { "item-name.wood" },
-    category = "kr-bioprocessing",
+    categories = {"kr-bioprocessing"},
     subgroup = "chemical",
     main_porduct = "wood",
     order = "a-b",
@@ -741,7 +741,7 @@ data:extend({
   {
     type = "recipe",
     name = "water-softening",
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "chemical",
     order = "w",
     enabled = false,
@@ -770,7 +770,7 @@ if mods["Limestone2"] then
     {
       type = "recipe",
       name = "air-scrubing-oil-processing",
-      category = "oil-processing",
+      categories = {"oil-processing"},
       icons = {
         { icon = "__base__/graphics/icons/fluid/light-oil.png", icon_size = 64},
         { icon = "__Limestone2__/graphics/icons/limestone-powder.png", icon_size = 64, scale=0.3, shift= {-8, -8}},
@@ -785,7 +785,7 @@ if mods["Limestone2"] then
     {
       type = "recipe",
       name = "calcium-sulfite-reaction",
-      category = "chemistry",
+      categories = {"chemistry"},
       icons = {
         { icon = "__ChemistryForYou2__/graphics/icons/sulfur-dioxide.png", icon_size = 128},
         { icon = "__ChemistryForYou2__/graphics/icons/calcium-sulfite.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
@@ -825,7 +825,7 @@ if mods["Cobalt2"] then
     {
       type = "recipe",
       name = "cobalt-hydroxide",
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "chemical",
       order = "c",
       enabled = false,
@@ -836,7 +836,7 @@ if mods["Cobalt2"] then
     {
       type = "recipe",
       name = "cobalt-nanotubes",
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "chemical",
       order = "c",
       enabled = false,
@@ -852,7 +852,7 @@ if mods["bzsilicon2"] then
     {
       type = "recipe",
       name = "silica-extraction",
-      category = fluidFiltrationCraft,
+      categories = {fluidFiltrationCraft},
       order = "s",
       icons = (mods["Krastorio2"] and
           {
@@ -874,7 +874,7 @@ if mods["bzsilicon2"] then
       {
         type = "recipe",
         name = "advanced-silicon-processing",
-        category = "smelting",
+        categories = {"smelting"},
         order = "g",
         icons = (mods["Krastorio2"] and
             {
@@ -898,7 +898,7 @@ if mods["bzsilicon2"] then
         type = "recipe",
         name = "zeolite-formaldehyde",
         localised_name = { "item-name.zeolite" },
-        category = "chemistry",
+        categories = {"chemistry"},
         order = "a[fluid]-g[formaldaehyde]",
         icons = (mods["Krastorio2"] and
             {
@@ -921,7 +921,7 @@ if mods["bzsilicon2"] then
       {
         type = "recipe",
         name = "tissue-digestion",
-        category = "chemistry",
+        categories = {"chemistry"},
         order = "c",
         icons = {
               { icon = "__Nylon2__/graphics/icons/coal-tar.png", icon_size = 64},
@@ -940,7 +940,7 @@ if mods["bzchlorine2"] then
     {
       type = "recipe",
       name = "sodium-hydroxide-reaction",
-      category = "chemistry",
+      categories = {"chemistry"},
       order = "s",
       icons = (mods["Krastorio2"] and
           {
@@ -966,7 +966,7 @@ if data.raw.fluid["chemical-waste"] and mods["BrimStuff-Updated"] then
       icons = {
           { icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png", icon_size = 64},
           { icon = "__ChemistryForYou2__/graphics/icons/sodium-hydroxide.png", icon_size = 128, scale=0.125, shift= {-8, -8}},},
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "waste-treatment",
       order = "c",
       enabled = false,
@@ -1010,7 +1010,7 @@ data:extend({
   {
     type = "recipe",
     name = "productivity-science-pack",
-    category = "crafting-with-fluid",
+    categories = {"crafting-with-fluid"},
     enabled = false,
     energy_required = 20,
     ingredients = productivity_science_pack_ingredients,
@@ -1065,7 +1065,7 @@ if mods["space-exploration"] then
     {
       type = "recipe",
       name = "vitalic-purification",
-      category = "chemistry",
+      categories = {"chemistry"},
       main_product = "se-vitalic-acid",
       subgroup = "vitamelange",
       order = "g",
@@ -1077,7 +1077,7 @@ if mods["space-exploration"] then
     {
       type = "recipe",
       name = "vitalic-residue-extract",
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "vitamelange",
       order = "g",
       enabled = false,
@@ -1088,7 +1088,7 @@ if mods["space-exploration"] then
     {
       type = "recipe",
       name = "vitalic-extract",
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "vitamelange",
       order = "g",
       enabled = false,
@@ -1104,7 +1104,7 @@ if mods["space-exploration"] then
           { icon = "__space-exploration-graphics__/graphics/icons/fluid/particle-stream.png", icon_size = 64},
           { icon = "__base__/graphics/icons/stone.png", icon_size = 64, scale=0.3, shift= {-8, -8}},
         },
-      category = "space-accelerator",
+      categories = {"space-accelerator"},
       subgroup = "stream",
       order = "r-f",
       enabled = false,
@@ -1134,7 +1134,7 @@ if mods["space-exploration"] then
       {
         type = "recipe",
         name = "vulcanite-enrichment",
-        category = "fu_plasma_category",
+        categories = {"fu_plasma_category"},
         subgroup = "vulcanite",
         order = "a-b",
         enabled = false,
@@ -1145,7 +1145,7 @@ if mods["space-exploration"] then
       {
         type = "recipe",
         name = "deep-space-ore-enrichment",
-        category = "smelting",
+        categories = {"smelting"},
         subgroup = "naquium",
         order = "a-b",
         enabled = false,
@@ -1187,7 +1187,7 @@ if mods["space-exploration"] then
         name = "tungsten-trioxide",
         icon = "__ChemistryForYou2__/graphics/icons/tungsten-trioxide.png",
         icon_size = 128,
-        category = "smelting",
+        categories = {"smelting"},
         subgroup = "chemical",
         order = "t",
         enabled = false,
@@ -1205,7 +1205,7 @@ if mods["space-exploration"] then
         } or {
           { icon = "__bztungsten2__/graphics/icons/tungsten-plate.png", icon_size = 128},
         }),
-        category = "smelting",
+        categories = {"smelting"},
         subgroup = "chemical",
         order = "t",
         enabled = false,
@@ -1216,7 +1216,7 @@ if mods["space-exploration"] then
       {
         type = "recipe",
         name = "smart-glass",
-        category = "chemistry",
+        categories = {"chemistry"},
         subgroup = "chemical",
         order = "g",
         enabled = false,
