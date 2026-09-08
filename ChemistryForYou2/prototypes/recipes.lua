@@ -996,7 +996,7 @@ if data.raw.fluid["radon"] then
 end
 data:extend({
   {
-      type = "tool",
+      type = "item",
       name = "productivity-science-pack",
       icon = science_pack,
       icon_size = 64,
