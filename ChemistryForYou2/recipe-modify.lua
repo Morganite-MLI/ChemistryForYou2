@@ -93,7 +93,7 @@ if mods["ShockTurret"] then
 end
 
 if mods["bzgold2"] and mods["ThemTharHills-Updated"] then
-    util.add_product("trace-gold-from-copper", { type = "item", name = "platinum-powder", amount=1, probability=0.1})
+    util.add_product("trace-gold-from-copper", { type = "item", name = "platinum-powder", amount=1, independent_probability=0.1})
     util.add_unlock("gold-processing", "platinum-ingot")
 end
 

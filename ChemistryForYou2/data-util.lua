@@ -63,8 +63,8 @@ function util.se_matter(params)
       results = {
         {type = "item", name = params.ore, amount = params.quant_out},
         {type="item", name="se-contaminated-scrap", amount=1},
-        {type="item", name=sedata, amount=1, probability=.99},
-        {type="item", name=sejunk, amount=1, probability=.01},
+        {type="item", name=sedata, amount=1, independent_probability=.99},
+        {type="item", name=sejunk, amount=1, independent_probability=.01},
         {type="fluid", name="se-space-coolant-hot", amount=25, ignored_by_productivity = 25, ignored_by_stats = 25},
       }
     }
@@ -100,8 +100,8 @@ function util.se_matter(params)
           {type="fluid", name="se-particle-stream", amount=50},
         },
         results = {
-          {type="item", name="se-kr-matter-liberation-data", amount=1, probability=.99},
-          {type="item", name=sejunk, amount=1, probability=.01},
+          {type="item", name="se-kr-matter-liberation-data", amount=1, independent_probability=.99},
+          {type="item", name=sejunk, amount=1, independent_probability=.01},
           {type="fluid", name="se-particle-stream", amount=params.stream_out, ignored_by_productivity = 50, ignored_by_stats = 50},
         }
       }
