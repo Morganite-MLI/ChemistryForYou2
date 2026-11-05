@@ -37,8 +37,10 @@ if mods["Bio_Industries_2"] then
     util.add_ingredient("bi-woodpulp", "sodium-hydroxide", 1)
     util.add_ingredient("bi-solar-boiler-hidden-panel", "sodium-hydroxide", 200)
 
-    util.add_prerequisite("bi-tech-advanced-biotechnology","organic-chemistry")
-    data.raw.technology["bi-tech-advanced-biotechnology"].unit.ingredients[#data.raw.technology["bi-tech-advanced-biotechnology"].unit.ingredients+1] = {"productivity-science-pack", 1}
+    if mods["Nylon2"] then
+        util.add_prerequisite("bi-tech-advanced-biotechnology","organic-chemistry")
+        data.raw.technology["bi-tech-advanced-biotechnology"].unit.ingredients[#data.raw.technology["bi-tech-advanced-biotechnology"].unit.ingredients+1] = {"productivity-science-pack", 1}
+    end
 end
 
 
@@ -48,10 +50,13 @@ if mods["RampantArsenal"]  then
 end
 
 if mods["Krastorio2"] then
-    util.add_prerequisite("kr-bio-fuel","organic-chemistry")
+    if mods["Nylon2"] then
+        util.add_prerequisite("kr-bio-fuel","organic-chemistry")
+        data.raw.technology["kr-bio-fuel"].unit.ingredients[#data.raw.technology["kr-bio-fuel"].unit.ingredients+1] = {"productivity-science-pack", 1}
+    end
+    
     util.add_unlock("kr-atmosphere-condensation", "carbon-dioxide-condensation")
     util.add_unlock("kr-bio-processing","tissue-digestion")
-    data.raw.technology["kr-bio-fuel"].unit.ingredients[#data.raw.technology["kr-bio-fuel"].unit.ingredients+1] = {"productivity-science-pack", 1}
     util.add_product("kr-water-electrolysis", {type="item", name="sodium-hydroxide", amount=2})
     util.add_product("se-kr-catalysed-water-electrolysis", {type="item", name="sodium-hydroxide", amount=20})
 

@@ -1,7 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.1
+Date: 4.11.2026
+  Info:
+    - Fixed changelog format
+  Compatibility:
+    - Updated for 2.1 (Thanks pla)
+    - Refactored to use bzlib (Also thanks pla)
+  Locale:
+    - Added some Polish localizations from S3BA
+  Bug Fixes:
+    - Fixed error when used without Nylon2
+---------------------------------------------------------------------------------------------------
 Version: 2.0.14
 Date: 24.05.2026
-  Thanks to Morganite for all the fixes
+  Info:
+    - Thanks to Morganite for all the fixes
   Bug Fixes:
     - Add sodium hydroxide product to iridium-catalysed water elctrolysis
     - Fix localization for air scrubbing oil processing

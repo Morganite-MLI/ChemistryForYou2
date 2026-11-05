@@ -17,7 +17,7 @@ if mods["Krastorio2"] then
 end
 
 local saltpeterPrerequ = {"chemical-science-pack"}
-if mods["bztin2"] then
+if mods["bztin2"] and mods["Nylon2"] then
   saltpeterPrerequ =  {"organic-chemistry"}
 end
 
