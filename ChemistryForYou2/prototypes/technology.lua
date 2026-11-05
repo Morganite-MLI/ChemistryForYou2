@@ -1,4 +1,4 @@
-local util = require("data-util")
+local util = require("__bzlib__/data-util")
 
 local science_pack = "__ChemistryForYou2__/graphics/icons/productivity-science-pack.png"
 local science_pack_size = 64

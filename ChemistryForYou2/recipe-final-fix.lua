@@ -1,4 +1,4 @@
-local util = require("data-util")
+local util = require("__bzlib__/data-util")
 
 if mods["space-exploration"] then
     util.add_product("se-vitalic-acid", { type = "fluid", name = "vitalic-slurry", amount = 8 })
